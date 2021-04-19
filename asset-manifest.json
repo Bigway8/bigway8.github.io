@@ -1,0 +1,22 @@
+{
+  "main.css": "/static/css/main.bafee6e5.chunk.css",
+  "main.js": "/static/js/main.f88e9f5b.chunk.js",
+  "main.js.map": "/static/js/main.f88e9f5b.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.d8e5f684.chunk.js": "/static/js/2.d8e5f684.chunk.js",
+  "static/js/2.d8e5f684.chunk.js.map": "/static/js/2.d8e5f684.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.78cbcac97aa47ac92305ef5f57831bc7.js": "/precache-manifest.78cbcac97aa47ac92305ef5f57831bc7.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.bafee6e5.chunk.css.map": "/static/css/main.bafee6e5.chunk.css.map",
+  "static/media/App.css": "/static/media/Lato-Semibold.3c6cfb1a.ttf",
+  "static/media/NextPage.css": "/static/media/NextPage.ef85b068.png",
+  "static/media/FirstBlock.css": "/static/media/first-block-bg.0e859342.png",
+  "static/media/IceBlock.css": "/static/media/slide-3-ice-block-3.3f8f39ed.png",
+  "static/media/SecondBlock.css": "/static/media/second-block-bg.af0e1777.png",
+  "static/media/FirstSlide.css": "/static/media/slide-1-box.cf3b29e7.png",
+  "static/media/SecondSlide.css": "/static/media/slide-2-box.9cbc2e42.png",
+  "static/media/ThirdSlide.css": "/static/media/slide-3-box.de80b018.png",
+  "static/media/ThirdBlock.css": "/static/media/third-block-bg.0d1bc5a7.png"
+}
