@@ -15,4 +15,7 @@ body {
   body {
     overflow: hidden;
   }
+  h1 {
+    transform: translateY(-50%);
+  }
 }
