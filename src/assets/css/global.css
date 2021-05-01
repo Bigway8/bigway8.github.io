@@ -10,5 +10,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+}
+@media screen and (max-width: 540px) {
+  body {
+    overflow: hidden;
+  }
 }
