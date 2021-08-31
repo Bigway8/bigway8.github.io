@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 export default function Navbar() {
   const router = useRouter()
   return (
-    <ul className=" flex flex-col">
+    <ul className="flex flex-col sticky" style={{ top: '168px' }}>
       <h4 className="text-sm text-gray-600 font-semibold mb-4">
         TERMS & CONDITIONS
       </h4>
