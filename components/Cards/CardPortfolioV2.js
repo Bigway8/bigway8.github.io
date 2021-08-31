@@ -1,5 +1,3 @@
-const prefix = '/bigway8.github.io'
-
 export default function CardPortfolio(props) {
   const prop = props.props
   return (
@@ -37,7 +35,7 @@ export default function CardPortfolio(props) {
         <div className="container mx-auto">
           <div className="mb-12 drop-shadow" style={{ borderRadius: '8px' }}>
             <img
-              src={`${prefix + prop.image}`}
+              src={`${prop.image}`}
               alt={`${prop.name}`}
               className="w-full"
               style={{
@@ -54,7 +52,7 @@ export default function CardPortfolio(props) {
           >
             <div>
               <img
-                src={`${prefix + prop.logo}`}
+                src={`${prop.logo}`}
                 alt={`${prop.name}`}
                 className="drop-shadow_logo mb-6"
                 style={{ maxWidth: '300px', borderRadius: '16px' }}
