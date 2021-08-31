@@ -1,9 +1,15 @@
+const prefix = '/bigway8.github.io'
+
 export default function CardPortfolio(props) {
   const prop = props.props
   return (
     <div className="relative">
       <div>
-        <img src={`${prop.image}`} alt={prop.name} className="w-full" />
+        <img
+          src={`${prefix + prop.image}`}
+          alt={prop.name}
+          className="w-full"
+        />
       </div>
       <div className="absolute top-0 w-full h-full">
         <div className="w-full h-full logo-title hover:logo-title">
