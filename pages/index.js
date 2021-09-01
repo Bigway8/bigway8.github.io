@@ -7,6 +7,28 @@ import IndexNavbar from 'components/Navbars/IndexNavbar.js'
 import Footer from 'components/Footers/Footer.js'
 
 export default function Index() {
+  React.useEffect(() => {
+    document.querySelectorAll('.appear-elem').forEach((i) => {
+      if (i) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            observerCallback(entries, observer, i)
+          },
+          { threshold: 1 }
+        )
+        observer.observe(i)
+      }
+    })
+
+    const observerCallback = (entries, observer, header) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1'
+          entry.target.style.transform = 'translateY(0)'
+        }
+      })
+    }
+  }, [])
   return (
     <>
       <IndexNavbar fixed />
@@ -99,7 +121,7 @@ export default function Index() {
             <div className="w-full md:w-6/12 px-4">
               <div className="flex flex-wrap">
                 <div className="w-full md:w-6/12 px-4">
-                  <div className="relative flex flex-col mt-4">
+                  <div className="relative flex flex-col mt-4 appear-elem">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-sitemap"></i>
@@ -111,7 +133,7 @@ export default function Index() {
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex flex-col min-w-0">
+                  <div className="relative flex flex-col min-w-0 appear-elem">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-drafting-compass"></i>
@@ -127,7 +149,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="w-full md:w-6/12 px-4">
-                  <div className="relative flex flex-col min-w-0 mt-4">
+                  <div className="relative flex flex-col min-w-0 mt-4 appear-elem">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-newspaper"></i>
@@ -142,7 +164,7 @@ export default function Index() {
                       </p>
                     </div>
                   </div>
-                  <div className="relative flex flex-col min-w-0">
+                  <div className="relative flex flex-col min-w-0 appear-elem">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-cogs"></i>
@@ -159,9 +181,9 @@ export default function Index() {
           </div>
         </div>
         {/** info */}
-        <div className="container mx-auto overflow-hidden pb-20">
+        <div className="container mx-auto overflow-hidden pb-40">
           <div className="flex flex-wrap items-center">
-            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
+            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48 appear-elem">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="fas fa-sitemap text-xl"></i>
               </div>
@@ -200,32 +222,32 @@ export default function Index() {
                 <img
                   alt="..."
                   src="/img/component-btn.png"
-                  className="w-full align-middle rounded absolute shadow-lg max-w-100-px left-145-px -top-29-px z-3"
+                  className="w-full align-middle rounded absolute shadow-lg max-w-100-px left-145-px -top-29-px z-3 appear-elem"
                 />
                 <img
                   alt="..."
                   src="/img/component-profile-card.png"
-                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-210-px left-260-px -top-160-px"
+                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-210-px left-260-px -top-160-px appear-elem"
                 />
                 <img
                   alt="..."
                   src="/img/component-info-card.png"
-                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-180-px left-40-px -top-225-px z-2"
+                  className="w-full align-middle rounded-lg absolute shadow-lg max-w-180-px left-40-px -top-225-px z-2 appear-elem"
                 />
                 <img
                   alt="..."
                   src="/img/component-info-2.png"
-                  className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px"
+                  className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px appear-elem"
                 />
                 <img
                   alt="..."
                   src="/img/component-menu.png"
-                  className="w-full align-middle rounded absolute shadow-lg max-w-580-px -left-20-px top-210-px"
+                  className="w-full align-middle rounded absolute shadow-lg max-w-580-px -left-20-px top-210-px appear-elem"
                 />
                 <img
                   alt="..."
                   src="/img/component-btn-pink.png"
-                  className="w-full align-middle rounded absolute shadow-xl max-w-120-px left-195-px top-95-px"
+                  className="w-full align-middle rounded absolute shadow-xl max-w-120-px left-195-px top-95-px appear-elem"
                 />
               </div>
             </div>
@@ -235,36 +257,48 @@ export default function Index() {
             <div className="w-full md:w-6/12 px-4 mr-auto ml-auto mt-32">
               <div className="justify-center flex flex-wrap relative">
                 <div className="my-4 w-full lg:w-6/12 px-4">
-                  <a href="https://svelte.dev/" target="_blank">
-                    <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
+                  <a
+                    href="https://getbootstrap.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="bg-purple-900 shadow-lg rounded-lg text-center p-8 appear-elem">
                       <img
                         alt="Svelte"
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
+                        src="/img/bootstrap.jpg"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
-                        Svelte
+                        Bootstrap
                       </p>
                     </div>
                   </a>
-                  <a href="https://reactjs.org/" target="_blank">
-                    <div className="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                  <a
+                    href="https://reactjs.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8 appear-elem">
                       <img
                         alt="React JS"
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
+                        src="/img/react.jpg"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         React JS
                       </p>
                     </div>
                   </a>
-                  <a href="https://nextjs.org/" target="_blank">
-                    <div className="bg-blueGray-700 shadow-lg rounded-lg text-center p-8 mt-8">
+                  <a
+                    href="https://nextjs.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="bg-blueGray-700 shadow-lg rounded-lg text-center p-8 mt-8 appear-elem">
                       <img
                         alt="Next JS"
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
+                        src="/img/next.jpg"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         Next JS
@@ -273,36 +307,44 @@ export default function Index() {
                   </a>
                 </div>
                 <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
-                  <a href="https://javascript.info/" target="_blank">
-                    <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
+                  <a
+                    href="https://javascript.info/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8 appear-elem">
                       <img
                         alt="JavaScript"
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
+                        src="/img/js.png"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         JavaScript
                       </p>
                     </div>
                   </a>
-                  <a href="https://angular.io/" target="_blank">
-                    <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
+                  <a
+                    href="https://angular.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8 appear-elem">
                       <img
                         alt="Angular"
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg"
+                        src="/img/angular.jpg"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         Angular
                       </p>
                     </div>
                   </a>
-                  <a href="https://vuejs.org/" target="_blank">
-                    <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                  <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
+                    <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8 appear-elem">
                       <img
                         alt="Vue.js"
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
+                        src="/img/vue.jpg"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         Vue.js
@@ -313,7 +355,7 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
+            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48 appear-elem">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="fas fa-drafting-compass text-xl"></i>
               </div>
@@ -354,21 +396,13 @@ export default function Index() {
                   Tooltips
                 </span>
               </div>
-              {/* <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index"
-                target="_blank"
-                className="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
-              >
-                View all{' '}
-                <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
-              </a> */}
             </div>
           </div>
         </div>
 
-        <div className="container mx-auto px-4 pb-32 pt-48">
-          <div className="items-center flex flex-wrap">
-            <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
+        <div className="container mx-auto px-4 pb-48">
+          <div className="items-center flex flex-wrap appear-elem">
+            <div className="w-full md:w-5/12 ml-auto px-12 md:px-4 pt-32">
               <div className="md:pr-12">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-code"></i>
@@ -455,7 +489,7 @@ export default function Index() {
       <section className="block relative z-1 bg-blueGray-600">
         <div className="container mx-auto">
           <div className="justify-center flex flex-wrap">
-            <div className="w-full lg:w-12/12 px-4  -mt-24 text-center">
+            <div className="w-full appear-elem lg:w-12/12 px-4  -mt-24 text-center">
               <div className="flex flex-wrap">
                 <div className="w-full lg:w-4/12 px-4">
                   <h5 className="text-xl font-semibold pb-4 text-center">
@@ -515,7 +549,7 @@ export default function Index() {
 
       <section className="py-20 bg-blueGray-600 overflow-hidden">
         <div className="container flex relative justify-center mx-auto pb-64">
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center appear-elem">
             <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64 text-center">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="fas fa-dollar-sign text-xl"></i>

@@ -33,21 +33,23 @@ export default function Portfolio() {
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full relative h-20"
           style={{ transform: 'translateZ(0)' }}
         >
-          <svg
-            className="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              className="fill-current"
-              style={{ color: 'rgba(71, 85, 105, 1)' }}
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
+          {items && (
+            <svg
+              className="absolute bottom-0 overflow-hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 2560 100"
+              x="0"
+              y="0"
+            >
+              <polygon
+                className="fill-current"
+                style={{ color: 'rgba(71, 85, 105, 1)' }}
+                points="2560 0 2560 100 0 100"
+              ></polygon>
+            </svg>
+          )}
         </div>
         <div
           className="grid grid-cols-fill-350 grid-rows-fill-350"

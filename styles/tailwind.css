@@ -1248,6 +1248,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgba(168, 85, 247, var(--tw-bg-opacity));
 }
+.bg-purple-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(91, 66, 131, var(--tw-bg-opacity));
+}
 
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
@@ -2427,6 +2431,9 @@ select {
 }
 .mt-48 {
   margin-top: 12rem;
+}
+.mt-64 {
+  margin-top: 16rem;
 }
 .mb-48 {
   margin-bottom: 12rem;
@@ -4368,4 +4375,11 @@ body::-webkit-scrollbar-thumb {
 
 .drop-shadow_logo {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.appear-elem {
+  opacity: 0;
+  transform: translateY(150px);
+  transition-delay: 0.5;
+  transition-duration: 1.5s;
 }
