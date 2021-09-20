@@ -5,7 +5,6 @@ import TeamMemberProfile from 'components/json/TeamMembersProfile.json'
 
 export default function About() {
   const [data, setData] = React.useState()
-  console.log(data)
 
   React.useEffect(() => {
     document.querySelectorAll('.show').forEach((i) => {
