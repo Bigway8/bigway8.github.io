@@ -1,0 +1,92 @@
+{
+  "teamMembers": [
+    {
+      "id": "1",
+      "profile": {
+        "firstName": "David",
+        "lastName": "Bigway",
+        "employeePosition": "CEO & Web developer",
+        "image": "/img/team-members/david.jpg",
+        "social": [
+          {
+            "name": "telegram-plane",
+            "style": "bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 pr-3-px"
+          },
+          {
+            "name": "instagram",
+            "style": "bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+          },
+          {
+            "name": "vk",
+            "style": "bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "profile": {
+        "firstName": "Artavazd",
+        "lastName": "Adunc",
+        "employeePosition": "CMO & PR Manager",
+        "image": "/img/team-members/artavazd.jpg",
+        "social": [
+          {
+            "name": "telegram-plane",
+            "style": "bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 pr-3-px"
+          },
+          {
+            "name": "facebook",
+            "style": "bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "profile": {
+        "firstName": "Anastacia",
+        "lastName": "Hopeful",
+        "employeePosition": "UI/UX Designer",
+        "image": "/img/team-members/anastacia.jpg",
+        "social": [
+          {
+            "name": "instagram",
+            "style": "bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+          },
+          {
+            "name": "telegram-plane",
+            "style": "bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 pr-3-px"
+          },
+          {
+            "name": "dribbble",
+            "style": "bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+          },
+          {
+            "name": "vk",
+            "style": "bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "profile": {
+        "firstName": "Aram",
+        "lastName": "Adunc",
+        "employeePosition": "CMO & PR Manager",
+        "image": "/img/team-members/artavazd.jpg",
+        "social": [
+          {
+            "name": "telegram-plane",
+            "style": "bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1 pr-3-px"
+          },
+          {
+            "name": "instagram",
+            "style": "bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+          }
+        ]
+      }
+    }
+  ]
+}

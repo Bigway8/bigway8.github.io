@@ -2839,6 +2839,12 @@ select {
 .pr-1-px {
   padding-right: 1px;
 }
+.pr-2-px {
+  padding-right: 2px;
+}
+.pr-3-px {
+  padding-right: 3px;
+}
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -4375,11 +4381,4 @@ body::-webkit-scrollbar-thumb {
 
 .drop-shadow_logo {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-}
-
-.appear-elem {
-  opacity: 0;
-  transform: translateY(150px);
-  transition-delay: 0.5;
-  transition-duration: 1.5s;
 }

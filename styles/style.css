@@ -1,0 +1,11 @@
+.about-box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.show {
+  opacity: 0;
+  transform: translateY(150px);
+  transition-delay: 0.5;
+  transition-duration: 1.5s;
+}
