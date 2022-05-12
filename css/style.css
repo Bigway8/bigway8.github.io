@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -113,7 +113,7 @@ p {
 
 @media screen and (max-width: 1024px) {
   .container {
-    width: 670px;
+    max-width: 670px;
   }
   .header_list {
     width: 60%;
@@ -125,6 +125,7 @@ p {
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;
+    padding: 0;
   }
   .mainlogo {
     width: 100vw;
