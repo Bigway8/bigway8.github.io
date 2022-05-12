@@ -14,7 +14,6 @@
     margin: 0;
     list-style-type: none;
     text-decoration: none;
-    font-family: Montserrat;
 }
 html {
     height: 100%;
@@ -68,8 +67,8 @@ body {
 }
 
 .mainlogo_animate {
-    -webkit-animation: scale-up-center 1s linear infinite alternate-reverse backwards;
-    animation: scale-up-center 1s linear infinite alternate-reverse backwards;
+    -webkit-animation: scaleup_down 1s linear infinite alternate-reverse backwards;
+    animation: scaleup_down 1s linear infinite alternate-reverse backwards;
     animation-name: scaleup_down;
 }
 
