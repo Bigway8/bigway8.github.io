@@ -33,6 +33,7 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 32px;
 }
 
 .header_burger {
@@ -131,7 +132,7 @@ p {
     width: 100vw;
   }
   .mainlogo_animate {
-    width: 300px;
+    width: 70%;
   }
   .header {
     z-index: 999;
