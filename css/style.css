@@ -125,7 +125,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .container {
-    width: 100%;
+    max-width: 100%;
     padding: 0;
   }
   .mainlogo {
