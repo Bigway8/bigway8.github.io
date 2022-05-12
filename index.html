@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Met you</title>
+    <script src="js/jq.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_burger">
+                <span></span>
+            </div>
+            <nav class="header_menu">
+                <ul class="header_list">
+                    <li>
+                        <a href="#" class="header_link">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="header_link">Terms</a>
+                    </li>
+                    <li>
+                        <a href="#" class="header_link">Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="header_link">For investors</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="mainlogo">
+                <img class="mainlogo_animate" src="/img/logo.svg" alt="logo">
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_mail">
+                <p>other questions:  <a href="mailto:support@metyou.ink">support@metyou.ink</a></p>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        $('.header_burger').click(function (event) {
+            $('.header_burger, .header_menu').toggleClass('active');
+            $('body').toggleClass('lock');
+        });
+    </script>
+</body>
+
+</html>
