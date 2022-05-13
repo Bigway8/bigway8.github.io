@@ -103,7 +103,7 @@ footer {
 }
 .footer_mail {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .footer_mail a,
 p {
