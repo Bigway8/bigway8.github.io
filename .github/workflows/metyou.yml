@@ -31,8 +31,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages
-<<<<<<< HEAD
           folder: .
-=======
-          folder: main
->>>>>>> 3d3a4a3094c8e665f12999fcbc5ce2dd43e1875f
