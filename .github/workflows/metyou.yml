@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -25,8 +25,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm ci
-      - run: npm predeploy
-      - run: npm deploy
+      - run: npm build
+      - run: npm export
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
