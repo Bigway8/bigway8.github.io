@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-
-const API_URL = ''
+import { API_URL } from '../../../consts/a'
 
 export default function AdminUsers() {
   const [data, setData] = useState([])
