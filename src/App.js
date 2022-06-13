@@ -9,27 +9,86 @@ import Terms from './pages/terms'
 import Investments from './pages/investments'
 
 import './assets/css/style.css'
+import AdminPanel from './private/admin'
+import Login from './pages/login'
+import AdminUsers from './private/admin/users/AdminUsers'
+import Welcome from './private/admin/welcome'
 
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/terms" element={<Terms />}></Route>
-        <Route path="/policy" element={<Policy />}></Route>
-        <Route path="/investments" element={<Investments />}></Route>
-        <Route path="/" element={<Home />}></Route>
+        {publicLinks.map((page) => {
+          return (
+            <Route
+              key={page.path}
+              path={page.path}
+              element={
+                <>
+                  <Header />
+                  {page.element}
+                  <Footer />
+                </>
+              }
+              exact={page.exact}
+            />
+          )
+        })}
+        <Route path="/private/admin/" element={<AdminPanel />}>
+          {privateLinks.map((page) => (
+            <Route
+              key={page.path}
+              path={page.path}
+              element={page.element}
+              exact={page.exact}
+            />
+          ))}
+        </Route>
       </Routes>
-      <Footer />
     </Router>
   )
 }
 
+const publicLinks = [
+  {
+    path: '/',
+    element: <Home />,
+    exact: true,
+  },
+  {
+    path: '/about',
+    element: <About />,
+    exact: true,
+  },
+  {
+    path: '/terms',
+    element: <Terms />,
+    exact: true,
+  },
+  {
+    path: '/policy',
+    element: <Policy />,
+    exact: true,
+  },
+  {
+    path: '/investments',
+    element: <Investments />,
+    exact: true,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+    exact: true,
+  },
+  {
+    path: '*',
+    element: <Home />,
+    exact: false,
+  },
+]
+
+const privateLinks = [
+  { path: 'admin-list', element: <AdminUsers />, exact: true },
+  { path: '', element: <Welcome />, exact: true },
+]
 export default App
-
-/* 
-TODO
-privat page
-
-*/
