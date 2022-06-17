@@ -96,6 +96,5 @@ const privateLinks = [
   { path: 'partners', element: <Partners />, exact: true },
   { path: 'purchases', element: <Purchases />, exact: true },
   { path: 'subscriptions', element: <Subscription />, exact: true },
-
 ]
 export default App
