@@ -6,11 +6,11 @@ import About from './pages/about'
 import Policy from './pages/policy'
 import Terms from './pages/terms'
 import Investments from './pages/investments'
-import './assets/css/style.css'
 import AdminPanel from './private/admin'
 import Login from './pages/login'
 import AdminUsers from './private/admin/users/AdminUsers'
 import Welcome from './private/admin/welcome'
+import './assets/css/style.css'
 
 function App() {
   return (
