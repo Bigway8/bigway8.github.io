@@ -33,12 +33,7 @@ export default function AdminUsers() {
                     </div>
                   </div>
                   <div className={styles.action_buttons}>
-                    <button
-                      className={styles.action_button}
-                      style={{ marginRight: '4px' }}
-                    >
-                      Чат
-                    </button>
+                    <button className={styles.action_button}>Чат</button>
                     <button className={styles.action_button}>Профиль</button>
                   </div>
                 </div>
@@ -51,7 +46,7 @@ export default function AdminUsers() {
   )
 }
 
-/* 
+/*
 {
 about: null
 age: 31
@@ -64,5 +59,5 @@ mainPhotoUrl: null
 phone: null
 sex: "MALE"
 username: "amberize"
-} 
+}
 */
