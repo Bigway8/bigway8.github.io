@@ -2,71 +2,55 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { API_URL } from '../../../consts/a'
 
+import styles from '../../../assets/css/private/index.module.css'
+
 export default function AdminUsers() {
   const [data, setData] = useState([])
+
   useEffect(() => {
     axios.get(API_URL + 'users').then((res) => setData(res.data))
   }, [])
-  const handleAllCheckboxes = (e) => {
-    /* console.log(e) */
-  }
+
   return (
-    <table style={styles.table}>
-      <thead>
-        <tr>
-          <th style={{ ...styles.th, ...styles.thd }}>
-            <input type="checkbox" onClick={(e) => handleAllCheckboxes(e)} />
-          </th>
-          <th style={{ ...styles.th, ...styles.thd }}>Дата регистрации</th>
-          <th style={{ ...styles.th, ...styles.thd }}>Имя</th>
-          <th style={{ ...styles.th, ...styles.thd }}>Почта</th>
-          <th style={{ ...styles.th, ...styles.thd }}>Город</th>
-          <th style={{ ...styles.th, ...styles.thd }}>Подробно</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((user) => {
+    <>
+      <div className={styles.users_table}>
+        {data.map((user, i) => {
           return (
-            <tr key={user.id}>
-              <td style={{ ...styles.td, ...styles.thd }}>
-                <input type="checkbox" id={'checkbox' + user.id} />
-              </td>
-              <td style={{ ...styles.td, ...styles.thd }}>{'user.regData'}</td>
-              <td style={{ ...styles.td, ...styles.thd }}>{user.username}</td>
-              <td style={{ ...styles.td, ...styles.thd }}>{user.email}</td>
-              <td style={{ ...styles.td, ...styles.thd }}>{user.city}</td>
-              <td style={{ ...styles.td, ...styles.thd }}>{'icon info'}</td>
-            </tr>
+            <div key={user.id} className={styles.user_card}>
+              <div className={styles.card__shadows}>
+                <div className={styles.card__field}>
+                  <div className={styles.short_info}>
+                    <div className={styles.short_info__img}>
+                      <img
+                        src="/"
+                        alt={user.username}
+                        className={styles.short_info__img_}
+                      />
+                    </div>
+                    <div className={styles.short_info__text}>
+                      <h5 className={styles.short_info__h5}>{user.username}</h5>
+                      <p className={styles.short_info__p}>{'role'}</p>
+                    </div>
+                  </div>
+                  <div className={styles.action_buttons}>
+                    <button
+                      className={styles.action_button}
+                      style={{ marginRight: '4px' }}
+                    >
+                      Чат
+                    </button>
+                    <button className={styles.action_button}>Профиль</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           )
         })}
-      </tbody>
-    </table>
+      </div>
+    </>
   )
 }
-const styles = {
-  table: {
-    width: '100%',
-    textDecoration: 'none',
-    borderCollapse: 'collapse',
-    textAlign: 'center',
-  },
-  th: {
-    fontWeight: 'normal',
-    fontSize: '14px',
-    color: '#ffffff',
-    backgroundColor: '#354251',
-  },
-  td: {
-    fontSize: '13px',
-    color: '#666666',
-  },
-  thd: {
-    whiteSpace: 'pre-wrap',
-    padding: '4px 6px',
-    verticalAlign: 'middle',
-    border: '1px solid #354251',
-  },
-}
+
 /* 
 {
 about: null

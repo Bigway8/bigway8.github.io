@@ -24,5 +24,6 @@ const styles = {
   content: {
     width: '100%',
     padding: '30px 40px',
+    backgroundColor: '#fafafa',
   },
 }
