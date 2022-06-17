@@ -1,3 +1,14 @@
+* {
+  font-family: 'SF Pro Display';
+}
+li {
+  padding: 0 20px;
+  margin-bottom: 16px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
 .users_table {
   box-sizing: border-box;
   display: flex;
@@ -47,7 +58,6 @@
   -webkit-box-pack: center;
   justify-content: center;
   flex-shrink: 0;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   line-height: 1;
   border-radius: 50%;
@@ -107,7 +117,6 @@
   vertical-align: middle;
   appearance: none;
   text-decoration: none;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.75;
   letter-spacing: 0.02857em;
   min-width: 64px;
@@ -118,7 +127,43 @@
   font-weight: 400;
   transition: all 250ms ease 0s;
   color: rgb(25, 118, 210);
-  background: rgba(25, 118, 210, 0.15);
+}
+.sidebar_wrapper {
+  min-width: 230px;
+  background: linear-gradient(rgba(34, 42, 69, 0.96), rgba(34, 42, 69, 0.96));
+  padding-top: 30px;
+  -webkit-box-shadow: 6px 2px 8px -2px rgba(34, 60, 80, 0.33);
+  -moz-box-shadow: 6px 2px 8px -2px rgba(34, 60, 80, 0.33);
+  box-shadow: 6px 2px 8px -2px rgba(34, 60, 80, 0.33);
+}
+.sidebar {
+  padding: 10px 0 50px 10px;
+  z-index: 111;
+  color: rgb(255, 255, 255);
+  transition: all 250ms ease-in-out 0s;
+
+}
+.sidebar_link {
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+  transition: all .3s ease 0s;
+  padding: 10px;
+  border-radius: 5px;
+}
+.sidebar_link:hover {
+  background-color: rgba(231, 231, 231, 0.664);
+  border-radius: 5px;
+}
+
+.sidebar_logolink {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-left: 25px;
+}
+.sidebar_logolink img {
+  padding-right: 15px;
 }
 
 @media (min-width: 768px) {

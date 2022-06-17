@@ -1,13 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
-
 import Home from './pages/home'
 import About from './pages/about'
 import Policy from './pages/policy'
 import Terms from './pages/terms'
 import Investments from './pages/investments'
-
 import './assets/css/style.css'
 import AdminPanel from './private/admin'
 import Login from './pages/login'
