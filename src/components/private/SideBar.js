@@ -15,10 +15,22 @@ export default function SideBar() {
       <div className={styles.sidebar}>
         <ul>
           <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location}>Main</Link>
+            <Link className={styles.sidebar_link} to={location}>Главная</Link>
           </li>
           <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location + '/admin-list'}>Admins</Link>
+            <Link className={styles.sidebar_link} to={location + '/admin-list'}>Администраторы</Link>
+          </li>
+          <li style={styles.li}>
+            <Link className={styles.sidebar_link} to={location + '/customers'}>Пользователи</Link>
+          </li>
+          <li style={styles.li}>
+            <Link className={styles.sidebar_link} to={location + '/partners'}>Партенры</Link>
+          </li>
+          <li style={styles.li}>
+            <Link className={styles.sidebar_link} to={location + '/purchases'}>Покупки</Link>
+          </li>
+          <li style={styles.li}>
+            <Link className={styles.sidebar_link} to={location + '/subscriptions'}>Подписки</Link>
           </li>
         </ul>
       </div>

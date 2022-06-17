@@ -10,6 +10,10 @@ import AdminPanel from './private/admin'
 import Login from './pages/login'
 import AdminUsers from './private/admin/users/AdminUsers'
 import Welcome from './private/admin/welcome'
+import Customers from './private/admin/customers'
+import Partners from './private/admin/partners'
+import Purchases from './private/admin/purchases'
+import Subscription from './private/admin/subscriptions'
 import './assets/css/style.css'
 
 function App() {
@@ -88,5 +92,10 @@ const publicLinks = [
 const privateLinks = [
   { path: 'admin-list', element: <AdminUsers />, exact: true },
   { path: '', element: <Welcome />, exact: true },
+  { path: 'customers', element: <Customers />, exact: true },
+  { path: 'partners', element: <Partners />, exact: true },
+  { path: 'purchases', element: <Purchases />, exact: true },
+  { path: 'subscriptions', element: <Subscription />, exact: true },
+
 ]
 export default App
