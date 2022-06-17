@@ -9,20 +9,23 @@ export default function SideBar() {
   return (
     <div className={styles.sidebar_wrapper}>
       <Link to={location} className={styles.sidebar_logolink}>
-        <img src={logo} width="50" height="50" />
+        <img src={logo} alt="logo" width="50" height="50" />
         <p>MetYou Admin</p>
       </Link>
       <div className={styles.sidebar}>
         <ul>
           <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location}>Main</Link>
+            <Link className={styles.sidebar_link} to={location}>
+              Main
+            </Link>
           </li>
           <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location + '/admin-list'}>Admins</Link>
+            <Link className={styles.sidebar_link} to={location + '/admin-list'}>
+              Admins
+            </Link>
           </li>
         </ul>
       </div>
     </div>
   )
 }
-
