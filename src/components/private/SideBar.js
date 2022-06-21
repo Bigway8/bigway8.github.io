@@ -9,12 +9,11 @@ export default function SideBar() {
   return (
     <div className={styles.sidebar_wrapper}>
       <Link to={location} className={styles.sidebar_logolink}>
-        <img src={logo} width="50" height="50" />
+        <img src={logo} width="50" height="50" alt="logo" />
         <p>MetYou Admin</p>
       </Link>
       <div className={styles.sidebar}>
         <ul>
-<<<<<<< HEAD
           {pages.map((page, i) => {
             return (
               <li style={styles.li} key={page.to + i}>
@@ -24,33 +23,12 @@ export default function SideBar() {
               </li>
             )
           })}
-=======
-          <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location}>Главная</Link>
-          </li>
-          <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location + '/admin-list'}>Администраторы</Link>
-          </li>
-          <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location + '/customers'}>Пользователи</Link>
-          </li>
-          <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location + '/partners'}>Партенры</Link>
-          </li>
-          <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location + '/purchases'}>Покупки</Link>
-          </li>
-          <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location + '/subscriptions'}>Подписки</Link>
-          </li>
->>>>>>> 2431de5aea92d1ffbae7addfe4d66dc85649fd00
         </ul>
       </div>
     </div>
   )
 }
 
-<<<<<<< HEAD
 const pages = [
   {
     to: '/',
@@ -68,6 +46,17 @@ const pages = [
     to: '/create-user',
     title: 'Создать пользователя',
   },
+  {
+    to: '/customers',
+    title: 'Пользователи',
+  },
+  {
+    to: '/partners',
+    title: 'Партенры',
+  },
+  {
+    to: '/purchases',
+    title: 'Покупки',
+  },
+  { to: '/subscriptions', title: 'Подписки' },
 ]
-=======
->>>>>>> 2431de5aea92d1ffbae7addfe4d66dc85649fd00
