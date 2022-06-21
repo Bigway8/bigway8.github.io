@@ -39,14 +39,6 @@ const pages = [
     title: 'Сотрудники',
   },
   {
-    to: '/users',
-    title: 'Пользователи',
-  },
-  {
-    to: '/create-user',
-    title: 'Создать пользователя',
-  },
-  {
     to: '/customers',
     title: 'Пользователи',
   },
@@ -59,4 +51,8 @@ const pages = [
     title: 'Покупки',
   },
   { to: '/subscriptions', title: 'Подписки' },
+  {
+    to: '/create-user',
+    title: 'Создать пользователя',
+  },
 ]
