@@ -7,6 +7,7 @@ export default function AdminPanel() {
     <div style={{ ...styles.flex, ...styles.adminPanel }}>
       <SideBar />
       <div style={styles.content}>
+        {/* header */}
         <Outlet />
       </div>
     </div>

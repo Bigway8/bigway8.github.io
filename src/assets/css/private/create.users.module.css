@@ -1,0 +1,10 @@
+.form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
+.input {
+  display: inline-flex;
+  margin-bottom: 15px;
+}

@@ -1,15 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
-import Home from './pages/home'
-import About from './pages/about'
-import Policy from './pages/policy'
-import Terms from './pages/terms'
-import Investments from './pages/investments'
-import AdminPanel from './private/admin'
-import Login from './pages/login'
-import AdminUsers from './private/admin/users/AdminUsers'
-import Welcome from './private/admin/welcome'
+import { Home, About, Policy, Investments, Login, Terms } from './pages'
+import { Welcome, Employees, Users, AdminPanel, CreateUser } from './private'
+
 import './assets/css/style.css'
 
 function App() {
@@ -86,7 +80,9 @@ const publicLinks = [
 ]
 
 const privateLinks = [
-  { path: 'admin-list', element: <AdminUsers />, exact: true },
+  { path: 'create-user', element: <CreateUser />, exact: true },
+  { path: 'employees', element: <Employees />, exact: true },
+  { path: 'users', element: <Users />, exact: true },
   { path: '', element: <Welcome />, exact: true },
 ]
 export default App

@@ -1,0 +1,6 @@
+export { default as About } from './about'
+export { default as Home } from './home'
+export { default as Investments } from './investments'
+export { default as Login } from './login'
+export { default as Policy } from './policy'
+export { default as Terms } from './terms'

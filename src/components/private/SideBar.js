@@ -14,18 +14,36 @@ export default function SideBar() {
       </Link>
       <div className={styles.sidebar}>
         <ul>
-          <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location}>
-              Main
-            </Link>
-          </li>
-          <li style={styles.li}>
-            <Link className={styles.sidebar_link} to={location + '/admin-list'}>
-              Admins
-            </Link>
-          </li>
+          {pages.map((page, i) => {
+            return (
+              <li style={styles.li} key={page.to + i}>
+                <Link className={styles.sidebar_link} to={location + page.to}>
+                  {page.title}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </div>
   )
 }
+
+const pages = [
+  {
+    to: '/',
+    title: 'Отчеты',
+  },
+  {
+    to: '/employees',
+    title: 'Сотрудники',
+  },
+  {
+    to: '/users',
+    title: 'Пользователи',
+  },
+  {
+    to: '/create-user',
+    title: 'Создать пользователя',
+  },
+]
