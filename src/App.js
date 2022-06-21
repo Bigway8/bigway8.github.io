@@ -1,9 +1,25 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
+<<<<<<< HEAD
 import { Home, About, Policy, Investments, Login, Terms } from './pages'
 import { Welcome, Employees, Users, AdminPanel, CreateUser } from './private'
 
+=======
+import Home from './pages/home'
+import About from './pages/about'
+import Policy from './pages/policy'
+import Terms from './pages/terms'
+import Investments from './pages/investments'
+import AdminPanel from './private/admin'
+import Login from './pages/login'
+import AdminUsers from './private/admin/users/AdminUsers'
+import Welcome from './private/admin/welcome'
+import Customers from './private/admin/customers'
+import Partners from './private/admin/partners'
+import Purchases from './private/admin/purchases'
+import Subscription from './private/admin/subscriptions'
+>>>>>>> 2431de5aea92d1ffbae7addfe4d66dc85649fd00
 import './assets/css/style.css'
 
 function App() {
@@ -84,5 +100,9 @@ const privateLinks = [
   { path: 'employees', element: <Employees />, exact: true },
   { path: 'users', element: <Users />, exact: true },
   { path: '', element: <Welcome />, exact: true },
+  { path: 'customers', element: <Customers />, exact: true },
+  { path: 'partners', element: <Partners />, exact: true },
+  { path: 'purchases', element: <Purchases />, exact: true },
+  { path: 'subscriptions', element: <Subscription />, exact: true },
 ]
 export default App
