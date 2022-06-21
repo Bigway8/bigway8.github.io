@@ -33,7 +33,7 @@ class Admin extends User {
   }
 }
 
-class SimpleUser extends User {
+class SimpleCustomer extends User {
   username: string /* или тут на user */
   phone: string
   age: number
@@ -71,4 +71,4 @@ class SimpleUser extends User {
   }
 }
 
-export { Admin, SimpleUser }
+export { Admin, SimpleCustomer }

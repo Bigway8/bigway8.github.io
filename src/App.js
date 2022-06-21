@@ -5,7 +5,6 @@ import { Home, About, Policy, Investments, Login, Terms } from './pages'
 import {
   Welcome,
   Employees,
-  Users,
   AdminPanel,
   CreateUser,
   Customers,
@@ -92,7 +91,6 @@ const publicLinks = [
 const privateLinks = [
   { path: 'create-user', element: <CreateUser />, exact: true },
   { path: 'employees', element: <Employees />, exact: true },
-  { path: 'users', element: <Users />, exact: true },
   { path: '', element: <Welcome />, exact: true },
   { path: 'customers', element: <Customers />, exact: true },
   { path: 'partners', element: <Partners />, exact: true },

@@ -1,6 +1,5 @@
 export { default as CreateUser } from './admin/createUsers'
 export { default as Employees } from './admin/employees'
-export { default as Users } from './admin/users'
 export { default as Welcome } from './admin/welcome'
 export { default as AdminPanel } from './admin'
 export { default as Customers } from './admin/customers'

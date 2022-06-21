@@ -3,13 +3,13 @@
  */
 
 import { useState } from 'react'
-import CreateUsers from './CreateUsers'
+import CreateUser from './CreateUser'
 
-export default function CreateUser() {
+export default function CreateUsers() {
   const [userState, setUserState] = useState(false)
   const [adminState, setAdminState] = useState(false)
 
-  const userHandle = () => {
+  const customerHandle = () => {
     setUserState(!userState)
     setAdminState(false)
   }
@@ -21,12 +21,12 @@ export default function CreateUser() {
   return (
     <>
       <div>
-        <button onClick={userHandle}>create user</button>
+        <button onClick={customerHandle}>create customer</button>
         <button onClick={adminHandle}>create admin</button>
-        {userState && <div>user</div>}
+        {userState && <div>customer</div>}
         {adminState && (
           <div>
-            <CreateUsers />
+            <CreateUser />
           </div>
         )}
       </div>
