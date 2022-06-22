@@ -26,8 +26,8 @@ li {
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: rgb(0 0 0 / 6%) 0px 3px 3px -2px, rgb(0 0 0 / 4%) 0px 3px 4px 0px,
-    rgb(0 0 0 / 4%) 0px 1px 8px 0px !important;
+  box-shadow: rgb(0 0 0 / 6%) 0 3px 3px -2px, rgb(0 0 0 / 4%) 0 3px 4px 0,
+    rgb(0 0 0 / 4%) 0 1px 8px 0 !important;
 }
 
 .card__field {
@@ -75,8 +75,8 @@ li {
   margin-left: 16px;
 }
 .short_info__h5 {
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
@@ -84,7 +84,7 @@ li {
   white-space: normal;
 }
 .short_info__p {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 14px;
   white-space: normal;
   color: rgba(52, 49, 76, 0.54);
@@ -106,9 +106,9 @@ li {
   position: relative;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  outline: 0px;
-  border: 0px;
-  margin: 0px 4px 0px 0px;
+  outline: 0;
+  border: 0;
+  margin: 0 4px 0 0;
   cursor: pointer;
   user-select: none;
   vertical-align: middle;
@@ -133,6 +133,9 @@ li {
   -moz-box-shadow: 6px -3px 11px 6px rgb(34 60 80 / 33%);
   box-shadow: 6px -3px 11px 6px rgb(34 60 80 / 33%);
   z-index: 10;
+  height: 100%;
+  position: relative;
+
 }
 .sidebar {
   padding: 10px 0 50px 10px;
@@ -163,7 +166,38 @@ li {
 .sidebar_logolink img {
   padding-right: 15px;
 }
-
+.wrapper_header {
+  border: 1px solid red;
+  height: 40px;
+  background-color: #fafafa;
+  position: relative;
+  z-index: 11;
+}
+.page_wrapper {
+  position: relative;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.content {
+  width: 100%;
+  padding: 30px 40px;
+  background-color: #fafafa;
+}
+.create {
+  margin-top: 30px;
+}
+.input_label {
+  font-size: 18px;
+  padding: 5px 0 5px 0;
+}
+.input_wrapper {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
 @media (min-width: 768px) {
   .user_card {
     flex-basis: 50%;

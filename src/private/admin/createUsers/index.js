@@ -4,6 +4,7 @@
 
 import { useState } from 'react'
 import CreateUser from './CreateUser'
+import styles from '../../../assets/css/private/index.module.css'
 
 export default function CreateUsers() {
   const [userState, setUserState] = useState(false)
@@ -21,11 +22,13 @@ export default function CreateUsers() {
   return (
     <>
       <div>
-        <button onClick={customerHandle}>create customer</button>
-        <button onClick={adminHandle}>create admin</button>
+        <button className={styles.action_button}
+                onClick={customerHandle}>Создать пользователя</button>
+        <button className={styles.action_button}
+                onClick={adminHandle}>Создать администратора</button>
         {userState && <div>customer</div>}
         {adminState && (
-          <div>
+          <div className={styles.create}>
             <CreateUser />
           </div>
         )}

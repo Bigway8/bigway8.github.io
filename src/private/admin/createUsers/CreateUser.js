@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Admin } from './users.ts'
+import styles from '../../../assets/css/private/index.module.css'
 /* 
 todo че по валидации?
 todo simple users
@@ -17,45 +18,29 @@ export default function CreateUser() {
     create.createAdmin()
   }
   return (
-    <form>
-      <label>
-        Имя
-        <input
-          type="text"
-          value={user.name}
-          name="name"
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Email
-        <input
-          type="email"
-          value={user.email}
-          name="email"
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Должность
-        <input
-          type="text"
-          value={user.role}
-          name="role"
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Пароль
-        <input
-          type="password"
-          value={user.password}
-          name="password"
-          onChange={handleChange}
-        />
-      </label>
-      <input onClick={handleClick} type="submit" value="Отправить" />
-    </form>
+      <form>
+          <div className={styles.input_wrapper}>
+              <label className={styles.input_label}>Имя</label>
+              <input type="text" value={user.name} name="name" onChange={handleChange}/>
+          </div>
+
+          <div className={styles.input_wrapper}>
+              <label className={styles.input_label}>Email</label>
+              <input type="email" value={user.email} name="email" onChange={handleChange}/>
+          </div>
+
+          <div className={styles.input_wrapper}>
+              <label className={styles.input_label}>Должность</label>
+              <input type="text" value={user.role} name="role" onChange={handleChange}/>
+          </div>
+
+          <div className={styles.input_wrapper}>
+              <label className={styles.input_label}>Пароль</label>
+              <input type="password" value={user.password} name="password" onChange={handleChange}/>
+          </div>
+
+          <input onClick={handleClick} type="submit" value="Отправить"/>
+      </form>
   )
 }
 
