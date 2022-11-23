@@ -8,15 +8,10 @@ async function getMe(url) {
   await fetch(url + `sendMessage?chat_id=${my_id}&text=${message}`, {
     method: 'post',
   })
-
-  await fetch(url + 'getUpdates', { method: 'get' })
-    .then((res) => res.json())
-    .then((data) => console.log(data))
 }
 setInterval(() => {
   const time = `${new Date().getHours()}:${new Date().getMinutes()}`
-  getMe(TELEGRAM_URI)
-  if (time == '18:00') {
+  if (time == '16:40') {
     getMe(TELEGRAM_URI)
   }
-}, 5 * 1000)
+}, 60 * 1000)
