@@ -17,4 +17,4 @@ setInterval(() => {
   if (time == '11:30') {
     getMe(TELEGRAM_URI)
   }
-}, 10 * 1000)
+}, 60 * 1000)
