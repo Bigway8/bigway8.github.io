@@ -10,9 +10,12 @@ async function getMe(url) {
   })
 }
 setInterval(() => {
-  const time = `${new Date().getHours()}:${new Date().getMinutes()}`
-  console.log(time)
-  if (time == '17:00') {
+  const time = `${new Date().getHours()}:${
+    new Date().getMinutes() < 10
+      ? '0' + new Date().getMinutes()
+      : new Date().getMinutes()
+  }`
+  if (time == '17:15') {
     getMe(TELEGRAM_URI)
   }
 }, 10 * 1000)
