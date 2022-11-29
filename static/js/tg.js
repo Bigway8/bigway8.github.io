@@ -1,6 +1,6 @@
 const TELEGRAM_URI = `https://api.telegram.org/bot5917789698:AAEDrfFN2HAqte2A2hj59RNnwl-99oWYZdk/`
 const message =
-  '🤬Пора сдавать ДТП \n @revindenis @AliceKoti @LNAG2 @AndreyKudri'
+  '🤬Пора сдавать ДТП'
 const chat_id = -1001792969931
 
 async function getMe(url) {
@@ -14,6 +14,7 @@ setInterval(() => {
       ? '0' + new Date().getMinutes()
       : new Date().getMinutes()
   }`
+  console.log(time)
   if (time == '11:30') {
     getMe(TELEGRAM_URI)
   }
